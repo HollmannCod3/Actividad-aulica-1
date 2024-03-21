@@ -4,5 +4,6 @@
 package cartasespañola;
 
 public class Baraja {
+   
 
 }

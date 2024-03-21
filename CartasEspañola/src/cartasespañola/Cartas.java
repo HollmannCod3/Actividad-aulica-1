@@ -35,8 +35,8 @@ salido ninguna indicárselo al usuario
 • mostrarBaraja(): muestra todas las cartas hasta el final. Es decir, 
 mostrará las cartas que no se han sacado.
  */
-    private int numero;
-    private String palo;
+    private final int numero[]={1,2,3,4,5,6,7,10,11,12};
+    private final String palo[]={"oro","basto","copa","espada"};
     
     
     public void barajar(){
