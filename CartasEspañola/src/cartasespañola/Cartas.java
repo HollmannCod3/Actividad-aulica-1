@@ -1,6 +1,6 @@
 
 /**
- * https://github.com/adamulp/sortingAlgos/
+ * https://github.com/HollmannCod3/Actividad-aulica-1
  *
  * @authors:
  *           Alexis Allendez        https://github.com/AlexisAllendez
