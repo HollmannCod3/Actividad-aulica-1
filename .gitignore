@@ -7,6 +7,9 @@
 # XML
 *.xml
 
+# Manifest
+*.mf
+
 # Log file
 *.log
 
