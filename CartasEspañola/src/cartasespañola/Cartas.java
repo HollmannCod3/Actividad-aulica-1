@@ -35,10 +35,23 @@ salido ninguna indicárselo al usuario
 • mostrarBaraja(): muestra todas las cartas hasta el final. Es decir, 
 mostrará las cartas que no se han sacado.
  */
-    private final int numero[]={1,2,3,4,5,6,7,10,11,12};
-    private final String palo[]={"oro","basto","copa","espada"};
-    
-    
+    private int numero;
+    private String palo;
+
+    public Cartas(int numero, String palo) {
+        this.numero = numero;
+        this.palo = palo;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getPalo() {
+        return palo;
+    }
+
+ 
     public void barajar(){
     
     }
@@ -65,7 +78,7 @@ mostrará las cartas que no se han sacado.
 
     @Override
     public String toString() {
-        return "Cartas{" + "numero=" + numero + ", palo=" + palo + '}';
+        return "Numero : " + numero + "Palo : " + palo ;
     }
     
     
