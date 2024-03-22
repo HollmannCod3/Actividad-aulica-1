@@ -23,15 +23,15 @@ public class Carta {
  */
 
     private int numero;
-    private String palo;
-    HashMap<String, Character> stringToCharMap = new HashMap<String, Character>() {{
-            put("Oro", 'O');
-            put("Basto", 'B');
-            put("Copa", 'C');
-            put("Espada", 'E');
+    private char palo;
+    HashMap<Character, String> charToStringMap = new HashMap<Character,String>() {{
+            put('O', "Oro   ");
+            put('B' ,"Basto " );
+            put('C', "Copa  ");
+            put('E', "Espada" );
         }};
 
-    public Carta(int numero, String palo) {
+    public Carta(int numero, char palo) {
         this.numero = numero;
         this.palo = palo;
     }
@@ -42,7 +42,7 @@ public class Carta {
         this.numero = numero;
     }
 
-    public void setPalo(String palo) {
+    public void setPalo(char palo) {
         this.palo = palo;
     }
 
@@ -50,15 +50,15 @@ public class Carta {
         return numero;
     }
 
-    public String getPalo() {
+    public char getPalo() {
         return palo;
     }
     
     
     @Override
     public String toString() {
-        char charPalo = stringToCharMap.get(palo);
-        return  numero + charPalo + "\t";
+        String strPalo = charToStringMap.get(palo);
+        return  numero + " de " +  strPalo + "\t";
     }
     
     
