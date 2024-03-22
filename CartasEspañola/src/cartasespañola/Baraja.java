@@ -130,9 +130,9 @@ public class Baraja {
     mostrará las cartas que no se han sacado.
     */
     public void mostrarBaraja(){
-        
+      
         for (int i = 0; cartas.size() < i; i++) {
-            System.out.println(cartas.elementAt(i));
+            System.out.println("a");
         }
 
     }

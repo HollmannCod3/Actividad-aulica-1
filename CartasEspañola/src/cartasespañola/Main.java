@@ -38,8 +38,9 @@ public class Main {
 
     public static void main(String[] args) {
         Baraja b1 = new Baraja();
+        b1.mostrarBaraja();
         
-        b1.Baraja();
+        
     }
     
     public static void mostrarCarta(Carta carta){
