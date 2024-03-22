@@ -95,6 +95,8 @@ public class Baraja {
     ese número de cartas. En caso de que haya menos cartas que las pedidas, 
     no devolveremos nada, pero debemos indicárselo al usuario.
     */
+    
+    
     public List<Carta> darCartas(int numero){
         if(cartas.size() < numero){
             System.out.println("No hay cartas disponibles.");
@@ -116,10 +118,18 @@ public class Baraja {
     salido ninguna indicárselo al usuario
     */
     
-    public void cartasMonton(){
-        
+    public void cartasMonton() {
+
+        if (monton.size() != 0) {
+            for (Carta carta : monton) {
+                System.out.println(carta);
+            }
+            return;
+        }
+        System.out.println("Todavia no sale ninguna carta");
+
     }
-    
+
     /*
     mostrarBaraja(): void
     
@@ -128,6 +138,10 @@ public class Baraja {
     */
     public void mostrarBaraja(){
         
+        for (int i = 0; cartas.size() < i; i++) {
+            System.out.println(cartas.elementAt(i));
+        }
+
     }
 
 }
