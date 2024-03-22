@@ -37,8 +37,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Baraja b1 = new Baraja();
-        b1.mostrarBaraja();
+        menuCartas();
+       
+        
         
         
     }
@@ -70,8 +71,10 @@ public class Main {
         do{
             mostrarMenuCartas();
             opcion = leer.nextLine().toUpperCase().charAt(0);
+            Baraja b1 = new Baraja();
             switch (opcion) {
                 case 'S':
+                    System.out.println(b1.siguienteCarta());
                     opcionInvalida = false;
                     break;
                 case 'C':
@@ -84,6 +87,8 @@ public class Main {
                     opcionInvalida = false;
                     break;
                 case 'M':
+                    
+                    b1.mostrarBaraja();
                     opcionInvalida = false;
                     break;
                 case 'N':
@@ -92,7 +97,7 @@ public class Main {
                 default:
                     System.out.println("Opcion invalida");
             }
-        }while(opcionInvalida);
+        }while(true);
     }
 
 }
