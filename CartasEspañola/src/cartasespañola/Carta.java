@@ -10,6 +10,8 @@
  */
 package cartasespañola;
 
+import java.util.HashMap;
+
 /**
  *
  * @author adam
@@ -22,6 +24,12 @@ public class Carta {
 
     private int numero;
     private String palo;
+    HashMap<String, Character> stringToCharMap = new HashMap<String, Character>() {{
+            put("Oro", 'O');
+            put("Basto", 'B');
+            put("Copa", 'C');
+            put("Espada", 'E');
+        }};
 
     public Carta(int numero, String palo) {
         this.numero = numero;
@@ -49,7 +57,8 @@ public class Carta {
     
     @Override
     public String toString() {
-        return "Cartas{" + "numero=" + numero + ", palo=" + palo + '}';
+        char charPalo = stringToCharMap.get(palo);
+        return  numero + charPalo + "\t";
     }
     
     

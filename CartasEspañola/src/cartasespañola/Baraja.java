@@ -14,7 +14,6 @@ package cartasespañola;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EmptyStackException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 
@@ -26,12 +25,7 @@ public class Baraja {
     List<Carta> monton;
     private final int numeros[]={1,2,3,4,5,6,7,10,11,12};
     private final String palos[]={"Oro","Basto","Copa","Espada"};
-    HashMap<String, Character> stringToCharMap = new HashMap<String, Character>() {{
-            put("Oro", 'O');
-            put("Basto", 'B');
-            put("Copa", 'C');
-            put("Espada", 'E');
-        }};
+    
     // stringToCharMap.get("Oro") devuelve 'O';
 
     public Baraja() {
@@ -70,9 +64,8 @@ public class Baraja {
     */
     public Carta siguienteCarta(){
         try{
-            Carta carta = cartas.pop();
-            monton.add(carta);
-            return carta;
+            monton.add(cartas.peek());
+            return cartas.pop();
         }catch(EmptyStackException e){
             System.out.println("No hay mas cartas");
             return null;
