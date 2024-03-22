@@ -37,7 +37,9 @@ import java.util.Scanner;
 public class CartasEspañola {
 
     public static void main(String[] args) {
+        Baraja b1 = new Baraja();
         
+        b1.Baraja();
     }
     
     public static void mostrarCarta(Carta carta){
