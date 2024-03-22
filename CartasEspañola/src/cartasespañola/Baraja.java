@@ -12,6 +12,7 @@
 package cartasespañola;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Baraja {
@@ -20,7 +21,14 @@ public class Baraja {
     List<Carta> cartas;
     List<Carta> monton;
     private final int numeros[]={1,2,3,4,5,6,7,10,11,12};
-    private final String palos[]={"oro","basto","copa","espada"};
+    private final String palos[]={"Oro","Basto","Copa","Espada"};
+    HashMap<String, Character> stringToCharMap = new HashMap<String, Character>() {{
+            put("Oro", 'O');
+            put("Basto", 'B');
+            put("Copa", 'C');
+            put("Espada", 'E');
+        }};
+    // stringToCharMap.get("Oro") devuelve 'O';
 
     public Baraja() {
         this.cartas = new ArrayList<>();

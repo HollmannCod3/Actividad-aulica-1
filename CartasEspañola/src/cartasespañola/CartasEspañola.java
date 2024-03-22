@@ -11,6 +11,7 @@
 package cartasespañola;
 
 import java.util.List;
+import java.util.Scanner;
 
 
 /*
@@ -47,6 +48,48 @@ public class CartasEspañola {
         for(Carta carta:cartas){
             mostrarCarta(carta);
         }
+    }
+    public static void mostrarMenuCartas(){
+        System.out.println("");
+        System.out.println("---------------------------------------");
+        System.out.println("Selecciona una opcion:");
+        System.out.println("\t[s]iguienteCarta");
+        System.out.println("\t[[c]artasDisponibles()");
+        System.out.println("\t[d]arCartas()");
+        System.out.println("\t[w]cartasMonton()");
+        System.out.println("\t[m]ostrarBaraja()");
+        System.out.println("\t[N]uevo Baraja");
+    }
+    public static void menuCartas(){
+        boolean opcionInvalida = true;
+        Character opcion = null;
+        Scanner leer = new Scanner(System.in);
+        do{
+            mostrarMenuCartas();
+            opcion = leer.nextLine().toUpperCase().charAt(0);
+            switch (opcion) {
+                case 'S':
+                    opcionInvalida = false;
+                    break;
+                case 'C':
+                    opcionInvalida = false;
+                    break;
+                case 'D':
+                    opcionInvalida = false;
+                    break;
+                case 'W':
+                    opcionInvalida = false;
+                    break;
+                case 'M':
+                    opcionInvalida = false;
+                    break;
+                case 'N':
+                    opcionInvalida = false;
+                    break;
+                default:
+                    System.out.println("Opcion invalida");
+            }
+        }while(opcionInvalida);
     }
 
 }
