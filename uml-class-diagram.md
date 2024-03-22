@@ -12,12 +12,12 @@ classDiagram
     }
 
     class Baraja {
-        - List<Carta> cartas
-        - List<Carta> monton
+        - List~Carta~ cartas
+        - List~Carta~ monton
         + Baraja()
         + barajar() void
         + siguienteCarta():Carta
-        + darCartas(cantidad:int) List<Carta>
+        + darCartas(cantidad:int) List~Carta~
         + cartasMonton() void
         + mostrarBaraja() void
 
@@ -28,5 +28,10 @@ classDiagram
 
 
 
-cartas Españolas: + static void main(String[] args)
+    class cartasEspañolas{
+        + main(String[] args) static void
+
+        + mostrarCarta(Carta) void
+        + mostrarCartas(List~Carta~) void
+    }
 ```
