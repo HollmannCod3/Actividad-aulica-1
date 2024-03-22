@@ -34,7 +34,7 @@ import java.util.Scanner;
     mostrará las cartas que no se han sacado.
  */
 
-public class CartasEspañola {
+public class Main {
 
     public static void main(String[] args) {
         Baraja b1 = new Baraja();
