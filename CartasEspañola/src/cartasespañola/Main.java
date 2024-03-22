@@ -42,9 +42,6 @@ public class Main {
         
         
         
-
-        b1.mostrarBaraja();
-
     }
     
     public static void mostrarCarta(Carta carta){

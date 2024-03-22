@@ -24,7 +24,7 @@ public class Baraja {
     Stack<Carta> cartas; 
     List<Carta> monton;
     private final int numeros[]={1,2,3,4,5,6,7,10,11,12};
-    private final String palos[]={"Oro","Basto","Copa","Espada"};
+    private final char palos[]={'O','B','C','E'};
     
     // stringToCharMap.get("Oro") devuelve 'O';
 
@@ -32,7 +32,7 @@ public class Baraja {
         this.cartas = new Stack<>();
         this.monton = new ArrayList<>();
         
-        for(String palo:palos){
+        for(char palo:palos){
             for(int numero:numeros){
                 cartas.push(new Carta(numero, palo));
             }
@@ -130,10 +130,14 @@ public class Baraja {
     mostrará las cartas que no se han sacado.
     */
     public void mostrarBaraja(){
-        
-        for (int i = 0; cartas.size() > i; i++) {
-            System.out.println(cartas.elementAt(i));
-      
+        int i;
+        for (i = 0; cartas.size() > i; i++) {
+            
+            for (int j = 0; j < 4; j++) {
+                System.out.print(cartas.elementAt(i)); 
+                i++;
+            }
+            System.out.println();
         }
 
     }
