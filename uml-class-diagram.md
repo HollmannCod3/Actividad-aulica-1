@@ -23,6 +23,8 @@ classDiagram
 
     }
     Carta <--o Baraja
+    Carta <-- cartasEspañolas
+    Baraja <-- cartasEspañolas
 
 
 
