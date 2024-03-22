@@ -44,7 +44,7 @@ public class Baraja {
             cartasMezcladas.add(cartas.get(randomIndex));
             cartas.remove(randomIndex);
         }
-        cartas = cartasMezcladas;
+        cartas.addAll(cartasMezcladas);
     }
     
     /*
