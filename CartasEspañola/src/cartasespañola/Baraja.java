@@ -46,7 +46,7 @@ mostrará las cartas que no se han sacado.
         
         for(String palo:palos){
             for(int numero:numeros){
-                cartas.add(numero, palo);
+                cartas.add(new Carta(numero, palo));
             }
         }
     }
