@@ -13,6 +13,7 @@ package cartasespañola;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.EmptyStackException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
@@ -68,9 +69,13 @@ public class Baraja {
     // se indica al usuario que no hay más cartas.
     */
     public Carta siguienteCarta(){
+        try{
+            return cartas.pop();
+        }catch(EmptyStackException e){
+            System.out.println("No hay mas cartas");
+            return null;
+        }
         
-        return null;
-    
     }
     
     // cartasDisponibles(): void
