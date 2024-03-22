@@ -131,7 +131,7 @@ public class Baraja {
     */
     public void mostrarBaraja(){
         
-        for (int i = 0; cartas.size() < i; i++) {
+        for (int i = 0; cartas.size() > i; i++) {
             System.out.println(cartas.elementAt(i));
         }
 
