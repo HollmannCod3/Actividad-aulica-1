@@ -10,6 +10,8 @@
 
 package cartasespañola;
 
+import java.util.List;
+
 
 /*
  * barajar(): cambia de posición todas las cartas aleatoriamente.
@@ -35,6 +37,16 @@ public class CartasEspañola {
 
     public static void main(String[] args) {
         
+    }
+    
+    public static void mostrarCarta(Carta carta){
+        System.out.println(carta);
+    }
+    
+    public static void mostrarCartas(List<Carta> cartas){
+        for(Carta carta:cartas){
+            mostrarCarta(carta);
+        }
     }
 
 }
