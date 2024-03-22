@@ -70,7 +70,9 @@ public class Baraja {
     */
     public Carta siguienteCarta(){
         try{
-            return cartas.pop();
+            Carta carta = cartas.pop();
+            monton.add(carta);
+            return carta;
         }catch(EmptyStackException e){
             System.out.println("No hay mas cartas");
             return null;
@@ -80,7 +82,9 @@ public class Baraja {
     
     // cartasDisponibles(): void
     // Indica el número de cartas que aún se puede repartir.
-    public void cartasDisponibles(){
+    public int cartasDisponibles(){
+        System.out.println("Hay " + cartas.size() + " disponibles.");
+        return cartas.size();
         
     }
     
