@@ -95,9 +95,18 @@ public class Baraja {
     ese número de cartas. En caso de que haya menos cartas que las pedidas, 
     no devolveremos nada, pero debemos indicárselo al usuario.
     */
-    public List<Carta> darCartas(){
+    public List<Carta> darCartas(int numero){
+        if(cartas.size() < numero){
+            System.out.println("No hay cartas disponibles.");
+            return null;
+        }
+        List<Carta> cartasParaDar = new ArrayList<>();
+        for(int i=0; i < numero;i++){
+            cartasParaDar.add(siguienteCarta());
+        }
+        return cartasParaDar;
         
-        return null;
+        
     }
     
     /*
