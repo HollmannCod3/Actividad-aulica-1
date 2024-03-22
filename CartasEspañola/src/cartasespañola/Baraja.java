@@ -12,13 +12,16 @@
 package cartasespañola;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Stack;
 
 public class Baraja {
     
 
-    List<Carta> cartas;
+//    List<Carta> cartas;
+    Stack<Carta> cartas; 
     List<Carta> monton;
     private final int numeros[]={1,2,3,4,5,6,7,10,11,12};
     private final String palos[]={"Oro","Basto","Copa","Espada"};
@@ -31,12 +34,12 @@ public class Baraja {
     // stringToCharMap.get("Oro") devuelve 'O';
 
     public Baraja() {
-        this.cartas = new ArrayList<>();
+        this.cartas = new Stack<>();
         this.monton = new ArrayList<>();
         
         for(String palo:palos){
             for(int numero:numeros){
-                cartas.add(new Carta(numero, palo));
+                cartas.push(new Carta(numero, palo));
             }
         }
         barajar();
@@ -46,13 +49,15 @@ public class Baraja {
     
     // barajar(): cambia de posición todas las cartas aleatoriamente.
     public final void barajar(){
-        List<Carta> cartasMezcladas = new ArrayList<>();
-        while(cartas.size() > 0){
-            int randomIndex = (int) (Math.random() * cartas.size());
-            cartasMezcladas.add(cartas.get(randomIndex));
-            cartas.remove(randomIndex);
-        }
-        cartas.addAll(cartasMezcladas);
+//        List<Carta> cartasMezcladas = new ArrayList<>();
+//        while(cartas.size() > 0){
+//            int randomIndex = (int) (Math.random() * cartas.size());
+//            cartasMezcladas.add(cartas.get(randomIndex));
+//            cartas.remove(randomIndex);
+//        }
+//        cartas.addAll(cartasMezcladas);
+        Collections.shuffle(cartas);
+        
     }
     
     /*

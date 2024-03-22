@@ -12,7 +12,7 @@ classDiagram
     }
 
     class Baraja {
-        - List~Carta~ cartas
+        - Stack~Carta~ cartas
         - List~Carta~ monton
         + Baraja()
         + barajar() void
