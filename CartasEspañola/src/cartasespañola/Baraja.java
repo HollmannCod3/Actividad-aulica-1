@@ -31,12 +31,20 @@ public class Baraja {
                 cartas.add(new Carta(numero, palo));
             }
         }
+        barajar();
+        
     }
     
     
     // barajar(): cambia de posición todas las cartas aleatoriamente.
-    public void barajar(){
-    
+    public final void barajar(){
+        List<Carta> cartasMezcladas = new ArrayList<>();
+        while(cartas.size() > 0){
+            int randomIndex = (int) (Math.random() * cartas.size());
+            cartasMezcladas.add(cartas.get(randomIndex));
+            cartas.remove(randomIndex);
+        }
+        cartas = cartasMezcladas;
     }
     
     /*
