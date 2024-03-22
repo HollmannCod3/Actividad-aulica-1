@@ -58,15 +58,16 @@ public class Main {
         System.out.println("---------------------------------------");
         System.out.println("Selecciona una opcion:");
         System.out.println("\t[s]iguienteCarta");
-        System.out.println("\t[[c]artasDisponibles()");
+        System.out.println("\t[c]artasDisponibles()");
         System.out.println("\t[d]arCartas()");
         System.out.println("\t[w]cartasMonton()");
         System.out.println("\t[m]ostrarBaraja()");
         System.out.println("\t[N]uevo Baraja");
+        System.out.println("\t[Q]Quit");
     }
     public static void menuCartas(){
-        boolean opcionInvalida = true;
-        Character opcion = null;
+        boolean seguir = true;
+        char opcion;
         Scanner leer = new Scanner(System.in);
         do{
             mostrarMenuCartas();
@@ -74,30 +75,32 @@ public class Main {
             Baraja b1 = new Baraja();
             switch (opcion) {
                 case 'S':
-                    System.out.println(b1.siguienteCarta());
-                    opcionInvalida = false;
+                    System.out.println(b1.siguienteCarta());                    
                     break;
                 case 'C':
-                    opcionInvalida = false;
+                    b1.cartasDisponibles();                   
                     break;
                 case 'D':
-                    opcionInvalida = false;
+                    
                     break;
                 case 'W':
-                    opcionInvalida = false;
+                    
                     break;
                 case 'M':
                     
                     b1.mostrarBaraja();
-                    opcionInvalida = false;
+                    
                     break;
                 case 'N':
-                    opcionInvalida = false;
+                    
+                    break;
+                case 'Q':
+                    seguir = false;
                     break;
                 default:
                     System.out.println("Opcion invalida");
             }
-        }while(true);
+        }while(seguir);
     }
 
 }
