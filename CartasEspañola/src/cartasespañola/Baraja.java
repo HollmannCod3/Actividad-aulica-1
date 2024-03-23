@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EmptyStackException;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Baraja {
@@ -89,6 +90,26 @@ public class Baraja {
     no devolveremos nada, pero debemos indicárselo al usuario.
     */
     
+    public List<Carta> darCartas(){
+        Scanner leer = new Scanner(System.in);
+        int numCartas = -1;
+        do{
+            System.out.print("\n"
+                    + "Cuantas cartas?: ");
+            try{
+                numCartas = Integer.parseInt(leer.nextLine());
+                if(numCartas < 0){
+                    System.out.println("\n"
+                            + "Tiene que ser mayor igual que cero.");
+                }
+            } catch (NumberFormatException e){
+                System.out.println("Solo se puede ingresar numeros enteros.");
+            }
+        }while(numCartas < 0);
+        
+        
+        return darCartas(numCartas);
+    }
     
     public List<Carta> darCartas(int numero){
         if(cartas.size() < numero){
@@ -113,8 +134,9 @@ public class Baraja {
     
     public void cartasMonton() {
 
-        if (monton.size() != 0) {
+        if (!monton.isEmpty()) {
             for (Carta carta : monton) {
+                System.out.print("\t");
                 System.out.println(carta);
             }
             return;
@@ -130,16 +152,18 @@ public class Baraja {
     mostrará las cartas que no se han sacado.
     */
     public void mostrarBaraja(){
-        int i;
-        for (i = 0; cartas.size() > i; i++) {
-            
-            for (int j = 0; j < 4; j++) {
-                System.out.print(cartas.elementAt(i)); 
+        int i, j;
+        i = j = 0;
+        
+        while(i < cartas.size()){
+            j=0;
+            while(i < cartas.size() && j < 4){
+                System.out.print(cartas.elementAt(i));
                 i++;
+                j++;
             }
-            System.out.println();
+            System.out.println("");
         }
-
     }
 
 }
