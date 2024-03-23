@@ -39,21 +39,8 @@ public class Main {
     public static void main(String[] args) {
         Baraja b1 = new Baraja();
         menuCartas(b1);
-       
-        
-        
-        
     }
-    
-    public static void mostrarCarta(Carta carta){
-        System.out.println(carta);
-    }
-    
-    public static void mostrarCartas(List<Carta> cartas){
-        for(Carta carta:cartas){
-            mostrarCarta(carta);
-        }
-    }
+
     public static void mostrarMenuCartas(){
         System.out.println("");
         System.out.println("-----------------------------------------------------------------------");
@@ -84,6 +71,7 @@ public class Main {
             opcion = leer.nextLine().toUpperCase().charAt(0);
             
             switch (opcion) {
+                // [b]arajar(): cambia de posición todas las cartas aleatoriamente.
                 case 'B':
                     baraja.barajar();
                     System.out.println("\n"

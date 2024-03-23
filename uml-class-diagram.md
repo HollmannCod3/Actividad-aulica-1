@@ -1,8 +1,9 @@
 ```mermaid
 classDiagram
     class Carta{
-        - String palo
         - Integer numero
+        - char palo
+        - HashMap~Character, String~ charToStringMap
         + Carta(palo, numero)
         + getPalo() String
         + getNumero() int
@@ -14,24 +15,25 @@ classDiagram
     class Baraja {
         - Stack~Carta~ cartas
         - List~Carta~ monton
+        - final int numeros[]
+        - final char palos[]
         + Baraja()
         + barajar() void
         + siguienteCarta():Carta
         + darCartas(cantidad:int) List~Carta~
+        + darCartas() List~Carta~
         + cartasMonton() void
         + mostrarBaraja() void
 
     }
     Carta <--o Baraja
-    Carta <-- cartasEspañolas
-    Baraja <-- cartasEspañolas
+    Baraja <-- Main
 
 
 
-    class cartasEspañolas{
+    class Main{
         + main(String[] args) static void
-
-        + mostrarCarta(Carta) void
-        + mostrarCartas(List~Carta~) void
+        + mostrarMenuCartas() static void
+        + menuCartas(Baraja baraja) static void
     }
 ```
