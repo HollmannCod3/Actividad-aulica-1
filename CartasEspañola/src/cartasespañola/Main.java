@@ -66,10 +66,11 @@ public class Main {
         
         System.out.print("\t[w]cartasMonton()");
         System.out.print("\t[m]ostrarBaraja()");
-        System.out.print("\t[N]ueva Baraja");
+        System.out.print("\t[B]arajar");
         System.out.println("");
         
-        System.out.println("\t[Q]uit/Salir");
+        System.out.print("\t[N]ueva Baraja");
+        System.out.println("\t\t[Q]uit/Salir");
         System.out.println("-----------------------------------------------------------------------");
     }
     public static void menuCartas(Baraja baraja){
@@ -83,6 +84,12 @@ public class Main {
             opcion = leer.nextLine().toUpperCase().charAt(0);
             
             switch (opcion) {
+                case 'B':
+                    baraja.barajar();
+                    System.out.println("\n"
+                            + "Se barajo la baraja"
+                            + "\n");
+                    break;
                 /*
                 [s]iguienteCarta(): Carta 
                     - Devuelve la siguiente carta que está en la baraja, 
